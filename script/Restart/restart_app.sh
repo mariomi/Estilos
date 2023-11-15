@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Sostituisci questo con il percorso della directory da cui deve essere eseguito il comando
-cd Estilos/odoo/
+cd /home/estilos/Estilos/odoo
 
 while true; do
     # Controlla se odoo-bin è già in esecuzione

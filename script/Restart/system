@@ -2,7 +2,7 @@
 Description=Odoo App Restart Service
 
 [Service]
-ExecStart= /home/estilos/Estilos/scipt/Restart
+ExecStart= /home/estilos/Estilos/script/Restart/
 Restart=always
 RestartSec=3
 
