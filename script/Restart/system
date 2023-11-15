@@ -1,0 +1,10 @@
+[Unit]
+Description=Odoo App Restart Service
+
+[Service]
+ExecStart= /home/estilos/Estilos/scipt/Restart
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
