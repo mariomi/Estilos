@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Sostituisci questo con il percorso della directory da cui deve essere eseguito il comando
-cd Estilos/odoo/
+# Cambia la directory di lavoro nella directory da cui deve essere eseguito odoo-bin
+cd /home/estilos/Estilos/odoo
 
 while true; do
     # Controlla se odoo-bin è già in esecuzione
@@ -14,3 +14,5 @@ while true; do
     echo "Controllo lo stato dell'app..."
     sleep 10  # Controlla ogni 10 secondi, puoi modificare questo intervallo
 done
+
+
