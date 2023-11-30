@@ -1,10 +1,6 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Cambia la directory di lavoro nella directory da cui deve essere eseguito odoo-bin
-=======
-# Sostituisci questo con il percorso della directory da cui deve essere eseguito il comando
->>>>>>> 0de21433af7ede7541d28b39f0fa91197778d5b8
 cd /home/estilos/Estilos/odoo
 
 while true; do
