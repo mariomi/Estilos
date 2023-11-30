@@ -346,6 +346,7 @@ var ProxyDevice  = core.Class.extend(mixins.PropertiesMixin,{
             urls.push('http://192.168.0.'+i+port);
             urls.push('http://192.168.1.'+i+port);
             urls.push('http://10.0.0.'+i+port);
+            
         }
 
         var prog_inc = 1/urls.length;

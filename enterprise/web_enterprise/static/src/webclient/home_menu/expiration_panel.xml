@@ -9,7 +9,7 @@
         <!-- t-translation="off" should be on next a element below -->
         <a t-if="subscription.daysLeft &gt; 0" href="#" class="oe_instance_hide_panel float-end alert-link" t-on-click.prevent="() => subscription.hideWarning()" aria-label="Dismiss">×</a>
         <span t-if="!subscription.lastRequestStatus" class="oe_instance_register">
-            <t t-if="!subscription.hasInstalledApps">You will be able to register your database once you have installed your first app.</t>
+            <t t-if="!subscription.hasInstalledApps">You will be able to register your database once you have installed your first app. Mario ti saluta :|</t>
             <t t-else="">
                 <t t-esc="expirationMessage"/>
                 <t t-if="subscription.warningType === 'admin'">
