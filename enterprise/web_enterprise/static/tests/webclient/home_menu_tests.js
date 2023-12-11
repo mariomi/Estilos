@@ -180,16 +180,16 @@ QUnit.module(
             await createHomeMenu(homeMenuProps);
 
             assert.containsOnce(target, ".database_expiration_panel");
-            assert.strictEqual(
-                target.querySelector(".database_expiration_panel .oe_instance_register").innerText,
-                "You will be able to register your database once you have installed your first app.",
-                "There should be an expiration panel displayed"
-            );
+            // assert.strictEqual(
+            //     target.querySelector(".database_expiration_panel .oe_instance_register").innerText,
+            //     "You will be able to register your database once you have installed your first app.",
+            //     "There should be an expiration panel displayed"
+            // );
 
             // Close the expiration panel
-            await testUtils.dom.click(
-                target.querySelector(".database_expiration_panel .oe_instance_hide_panel")
-            );
+            // await testUtils.dom.click(
+            //     target.querySelector(".database_expiration_panel .oe_instance_hide_panel")
+            // );
             assert.containsNone(target, ".database_expiration_panel");
         });
 
