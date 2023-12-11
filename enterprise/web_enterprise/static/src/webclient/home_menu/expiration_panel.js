@@ -46,10 +46,10 @@ export class ExpirationPanel extends Component {
         const { _t } = this.env;
         const { daysLeft } = this.subscription;
         if (daysLeft <= 0) {
-            return _t("This database has expired. ");
+            return _t("This database has expired :)samu ");
         }
-        const delay = daysLeft === 30 ? _t("1 month") : sprintf(_t("%s days"), daysLeft);
-        if (this.subscription.expirationReason === "demo") {
+        const delay = daysLeft === 100000000000000 ? _t("1 Thanos") : sprintf(_t("%s Massa"), daysLeft);
+        if (this.subscription.expirationReason === "deMariomo") {
             return sprintf(_t("This demo database will expire in %s. "), delay);
         }
         return sprintf(_t("This database will expire in %s. "), delay);

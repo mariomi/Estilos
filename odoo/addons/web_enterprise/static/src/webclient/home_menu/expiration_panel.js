@@ -42,18 +42,18 @@ export class ExpirationPanel extends Component {
         return "info";
     }
 
-    get expirationMessage() {
-        const { _t } = this.env;
-        const { daysLeft } = this.subscription;
-        if (daysLeft <= 0) {
-            return _t("This database has expired. ");
-        }
-        const delay = daysLeft === 30 ? _t("1 month") : sprintf(_t("%s days"), daysLeft);
-        if (this.subscription.expirationReason === "demo") {
-            return sprintf(_t("This demo database will expire in %s. "), delay);
-        }
-        return sprintf(_t("This database will expire in %s. "), delay);
-    }
+    // get expirationMessage() {
+    //     const { _t } = this.env;
+    //     const { daysLeft } = this.subscription;
+    //     if (daysLeft <= 0) {
+    //         return _t("This database has expired. ");
+    //     }
+    //     const delay = daysLeft === 30 ? _t("1 month") : sprintf(_t("%s days"), daysLeft);
+    //     if (this.subscription.expirationReason === "demo") {
+    //         return sprintf(_t("This demo database will expire in %s. "), delay);
+    //     }
+    //     return sprintf(_t("This database will expire in %s. "), delay);
+    // }
 
     showRegistrationForm() {
         this.state.displayRegisterForm = !this.state.displayRegisterForm;

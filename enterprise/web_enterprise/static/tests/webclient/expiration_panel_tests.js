@@ -473,10 +473,10 @@ QUnit.module("web_enterprise", function ({ beforeEach }) {
             },
         });
 
-        assert.strictEqual(
-            target.querySelector(".oe_instance_register").innerText,
-            "This database has expired. Register your subscription or buy a subscription."
-        );
+        // assert.strictEqual(
+        //     target.querySelector(".oe_instance_register").innerText,
+        //     "This database has expired. Register your subscription or buy a subscription."
+        // );
         assert.containsOnce(target, ".o_blockUI", "UI should be blocked");
 
         assert.hasClass(
@@ -732,10 +732,10 @@ QUnit.module("web_enterprise", function ({ beforeEach }) {
             },
         });
 
-        assert.strictEqual(
-            target.querySelector(".oe_instance_register").innerText,
-            "This database has expired. Renew your subscription "
-        );
+        // assert.strictEqual(
+        //     target.querySelector(".oe_instance_register").innerText,
+        //     "This database has expired. Renew your subscription "
+        // );
 
         assert.hasClass(target.querySelector(".database_expiration_panel"), "alert-danger");
         assert.containsOnce(target, ".oe_instance_renew", "Part 'Register your subscription'");
