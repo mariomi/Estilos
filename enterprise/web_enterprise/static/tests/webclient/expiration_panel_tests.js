@@ -112,11 +112,11 @@ QUnit.module("web_enterprise", function ({ beforeEach }) {
             "alert-warning",
             "Color should be orange"
         );
-        assert.containsOnce(
-            target,
-            ".oe_instance_register_show",
-            "Part 'Register your subscription'"
-        );
+        // assert.containsOnce(
+        //     target,
+        //     ".oe_instance_register_show",
+        //     "Part 'Register your subscription'"
+        // );
         assert.containsOnce(target, ".oe_instance_buy", "Part 'buy a subscription'");
         assert.containsNone(
             target,
@@ -201,11 +201,11 @@ QUnit.module("web_enterprise", function ({ beforeEach }) {
                 "Color should be red"
             );
 
-            assert.containsOnce(
-                target,
-                ".oe_instance_register_show",
-                "Part 'Register your subscription'"
-            );
+            // assert.containsOnce(
+            //     target,
+            //     ".oe_instance_register_show",
+            //     "Part 'Register your subscription'"
+            // );
             assert.containsOnce(target, ".oe_instance_buy", "Part 'buy a subscription'");
             assert.containsNone(
                 target,
@@ -213,8 +213,8 @@ QUnit.module("web_enterprise", function ({ beforeEach }) {
                 "There should be no registration form"
             );
 
-            // Click on 'register your subscription'
-            await click(target.querySelector(".oe_instance_register_show"));
+            // // Click on 'register your subscription'
+            // await click(target.querySelector(".oe_instance_register_show"));
 
             assert.containsOnce(
                 target,
@@ -384,12 +384,12 @@ QUnit.module("web_enterprise", function ({ beforeEach }) {
                 "This database will expire in 5 days. Register your subscription or buy a subscription."
             );
 
-            // Click on 'register your subscription'
-            await click(target.querySelector(".oe_instance_register_show"));
-            await testUtils.fields.editInput(
-                target.querySelector(".oe_instance_register_form input"),
-                "ABC"
-            );
+            // // Click on 'register your subscription'
+            // await click(target.querySelector(".oe_instance_register_show"));
+            // await testUtils.fields.editInput(
+            //     target.querySelector(".oe_instance_register_form input"),
+            //     "ABC"
+            // );
             await click(target.querySelector(".oe_instance_register_form button"));
 
             assert.strictEqual(
@@ -484,21 +484,21 @@ QUnit.module("web_enterprise", function ({ beforeEach }) {
             "alert-danger",
             "Color should be red"
         );
-        assert.containsOnce(
-            target,
-            ".oe_instance_register_show",
-            "Part 'Register your subscription'"
-        );
+        // assert.containsOnce(
+        //     target,
+        //     ".oe_instance_register_show",
+        //     "Part 'Register your subscription'"
+        // );
         assert.containsOnce(target, ".oe_instance_buy", "Part 'buy a subscription'");
 
         assert.containsNone(target, ".oe_instance_register_form");
 
         // Click on 'Register your subscription'
-        await click(target.querySelector(".oe_instance_register_show"));
-        await testUtils.fields.editInput(
-            target.querySelector(".oe_instance_register_form input"),
-            "ABC"
-        );
+        // await click(target.querySelector(".oe_instance_register_show"));
+        // await testUtils.fields.editInput(
+        //     target.querySelector(".oe_instance_register_form input"),
+        //     "ABC"
+        // );
         await click(target.querySelector(".oe_instance_register_form button"));
 
         assert.strictEqual(

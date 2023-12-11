@@ -14,7 +14,7 @@
                 <t t-esc="expirationMessage"/>
                 <t t-if="subscription.warningType === 'admin'">
                     <t t-if="subscription.unregistered">
-                        <a class="oe_instance_register_show alert-link text-decoration-underline" href="#" t-on-click.prevent="showRegistrationForm">Register your subscription</a>
+                        <!-- <a class="oe_instance_register_show alert-link text-decoration-underline" href="#" t-on-click.prevent="showRegistrationForm">Register your subscription</a> -->
                         or
                         <a class="oe_instance_buy alert-link text-decoration-underline" href="#" t-on-click.prevent="() => subscription.buy()">buy a subscription</a>.
                     </t>
