@@ -1,4 +1,4 @@
-<!-- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
 
 <t t-name="DatabaseExpirationPanel" owl="1">
@@ -6,7 +6,7 @@
         class="database_expiration_panel alert o-hidden-ios text-center mt-4"
         t-attf-class="alert-{{alertType}}"
         >
-     
+        <!-- t-translation="off" should be on next a element below -->
         <a t-if="subscription.daysLeft &gt; 0" href="#" class="oe_instance_hide_panel float-end alert-link" t-on-click.prevent="() => subscription.hideWarning()" aria-label="Dismiss">×</a>
         <span t-if="!subscription.lastRequestStatus" class="oe_instance_register">
             <t t-if="!subscription.hasInstalledApps">You will be able to register your database once you have installed your first app.</t>
@@ -14,7 +14,8 @@
                 <t t-esc="expirationMessage"/>
                 <t t-if="subscription.warningType === 'admin'">
                     <t t-if="subscription.unregistered">
-                       
+                        <!-- <a class="oe_instance_register_show alert-link text-decoration-underline" href="#" t-on-click.prevent="showRegistrationForm">Register your subscription</a>
+                        or -->
                         <a class="oe_instance_buy alert-link text-decoration-underline" href="#" t-on-click.prevent="() => subscription.buy()">buy a subscription</a>.
                     </t>
                     <t t-if="subscription.expirationReason === 'renewal'">
@@ -73,4 +74,4 @@
     </div>
 </t>
 
-</templates> -->
+</templates>
