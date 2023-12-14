@@ -30,17 +30,10 @@ export class ExpirationPanel extends Component {
     }
 
     get alertType() {
-        if (this.subscription.lastRequestStatus === "success") {
-            return "success";
-        }
-        const { daysLeft } = this.subscription;
-        if (daysLeft <= 6) {
-            return "danger";
-        } else if (daysLeft <= 16) {
-            return "warning";
-        }
+        // Return 'info' to avoid showing critical alerts
         return "info";
     }
+    
 
     get expirationMessage() {
         const { _t } = this.env;
