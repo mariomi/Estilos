@@ -2,7 +2,14 @@
 Description=Odoo App Restart Service
 
 [Service]
-ExecStart= /home/estilos/Estilos/script/Restart/restart_app.sh
+# Full path to the executable script
+ExecStart=/home/estilos/Estilos/script/Restart/restart_app.sh
+# Specifies the service type
+Type=simple
+# Running the service as root
+User=root
+Group=root
+# Restart policy
 Restart=always
 RestartSec=3
 

@@ -1,19 +1,23 @@
-
 #!/bin/bash
 
-# Cambia la directory di lavoro nella directory da cui deve essere eseguito odoo-bin
-cd /home/estilos/Estilos/odoo
+# Directory where odoo-bin should be executed from
+WORK_DIR="/home/estilos/Estilos/odoo"
+
+# Path to odoo-bin
+ODOO_BIN="odoo-bin"
+
+# Change to the working directory
+cd "$WORK_DIR"
 
 while true; do
-    # Controlla se odoo-bin è già in esecuzione
-    if ! pgrep -f "odoo-bin --addons-path=addons" > /dev/null; then
-        echo "Avvio dell'app..."
-        python3 odoo-bin --addons-path=addons
+    # Check if odoo-bin is already running
+    if ! pgrep -f "$ODOO_BIN --addons-path=addons" > /dev/null; then
+        echo "Starting Odoo app..."
+        # Execute odoo-bin with Python3
+        python3 $ODOO_BIN --addons-path=addons
     else
-        echo "L'app è già in esecuzione."
+        echo "Odoo app is already running."
     fi
-    echo "Controllo lo stato dell'app..."
-    sleep 3600  # Controlla ogni 10 secondi, puoi modificare questo intervallo
+    # Check the app status every hour
+    sleep 3600
 done
-
-
