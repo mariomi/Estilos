@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Cambia la directory di lavoro nella directory da cui deve essere eseguito odoo-bin
@@ -12,7 +13,7 @@ while true; do
         echo "L'app è già in esecuzione."
     fi
     echo "Controllo lo stato dell'app..."
-    sleep 10  # Controlla ogni 10 secondi, puoi modificare questo intervallo
+    sleep 3600  # Controlla ogni 10 secondi, puoi modificare questo intervallo
 done
 
 
